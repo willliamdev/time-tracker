@@ -31,6 +31,7 @@ h1 {
 .timer {
   margin: 60px auto;
   font-size: 80pt;
+  font-family: monospace;
 }
 
 button {
