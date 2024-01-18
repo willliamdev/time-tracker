@@ -10,12 +10,16 @@ let time = 0
 let intervalId
 
 function startTimer() {
+  stopButton.classList.remove("hide")
+  startButton.classList.add("hide")
   if (!intervalId) {
-    intervalId = setInterval(soma, 100)
+    intervalId = setInterval(soma, 1000)
   }
 }
 
 function stopTimer() {
+  startButton.classList.remove("hide")
+  stopButton.classList.add("hide")
   clearInterval(intervalId)
   intervalId = null
 }

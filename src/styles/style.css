@@ -35,7 +35,8 @@ h1 {
 }
 
 button {
-  background-color: #fff;
+  background: #1c1c1d;
+  color: #fff;
   border: none;
   padding: 20px;
   font-size: 16pt;
@@ -47,7 +48,14 @@ button {
 
 }
 
-button:hover {
+.hide {
+  display: none
+}
+
+#stop {
+  background: #e23e3e;
+}
+
+#start {
   background: #1cb34e;
-  color: #fff;
 }
