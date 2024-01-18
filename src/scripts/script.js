@@ -13,7 +13,7 @@ function startTimer() {
   stopButton.classList.remove("hide")
   startButton.classList.add("hide")
   if (!intervalId) {
-    intervalId = setInterval(soma, 1000)
+    intervalId = setInterval(soma, 1)
   }
 }
 
@@ -27,7 +27,7 @@ function stopTimer() {
 function soma() {
   console.log(intervalId)
   time += 1
-  let seconds = (time % 60)
-  let minutes = Math.floor(time / 60)
+  let seconds = String(time % 60).padStart(2, "0")
+  let minutes = String(Math.floor(time / 60)).padStart(2, "0")
   timer.innerHTML = `${minutes}:${seconds}`
 }
