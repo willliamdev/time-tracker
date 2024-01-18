@@ -1,20 +1,29 @@
 const timer = document.querySelector(".timer")
+const startButton = document.querySelector("#start")
+const stopButton = document.querySelector("#stop")
 
-const myButton = document.querySelector(".my-button")
-console.log(myButton)
+startButton.addEventListener("click", startTimer)
 
-myButton.addEventListener("click", startsTimer)
+stopButton.addEventListener("click", stopTimer)
 
-function startsTimer() {
-  let interv = setInterval(soma, 100,)
-  return interv
-
-}
 let time = 0
+let intervalId
+
+function startTimer() {
+  if (!intervalId) {
+    intervalId = setInterval(soma, 100)
+  }
+}
+
+function stopTimer() {
+  clearInterval(intervalId)
+  intervalId = null
+}
+
 function soma() {
+  console.log(intervalId)
   time += 1
   let seconds = (time % 60)
   let minutes = Math.floor(time / 60)
   timer.innerHTML = `${minutes}:${seconds}`
-
 }
