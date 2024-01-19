@@ -16,6 +16,7 @@ body {
   height: 100%;
   width: min(100%, 600px);
   margin: auto;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,11 +35,18 @@ h1 {
   font-family: monospace;
 }
 
+.controls {
+  width: 100%;
+  display: flex;
+
+  gap: 10px;
+}
+
 button {
-  background: #1c1c1d;
+  background: #282829;
   color: #fff;
   border: none;
-  padding: 20px;
+  padding: 15px;
   font-size: 16pt;
   font-weight: 600;
   width: 100%;
@@ -52,7 +60,11 @@ button {
   display: none
 }
 
-#stop {
+#pause:hover {
+  background: #484849;
+}
+
+#stop:hover {
   background: #e23e3e;
 }
 
