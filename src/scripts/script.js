@@ -16,7 +16,7 @@ function startTimer() {
   stopButton.classList.add("hide")
   startButton.classList.add("hide")
   if (!intervalId) {
-    intervalId = setInterval(soma, 10)
+    intervalId = setInterval(soma, 1000)
   }
 }
 
